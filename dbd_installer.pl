@@ -7,7 +7,7 @@ fileConfigs();
 installOracle();
 
 sub installBinaries{
-$installOpenVPNEasyRSA = `apt-get install build-essential zip unzip -y`;
+$installBins= `apt-get install build-essential zip unzip -y`;
 say "Done..";
 }
 
