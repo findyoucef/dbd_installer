@@ -6,6 +6,9 @@ installBinaries();
 fileConfigs();
 installOracle();
 
+$whoami = `whoami`;
+chomp($whoami);
+
 sub installBinaries{
 $installBins= `apt-get install build-essential zip unzip -y`;
 say "Done..";
@@ -13,8 +16,8 @@ say "Done..";
 
 sub fileConfigs{
 say "Setting Configuration File Paths...";
-$oracleProfilePath = '$HOME/.oracle_profile';
-$bashrcPath = '$HOME/.bashrc';
+$oracleProfilePath = "/home/$whoami/.oracle_profile";
+$bashrcPath = "/home/$whoami/.bashrc";
 
 say "Writing server configuration to: $serverConfPath...";
 
